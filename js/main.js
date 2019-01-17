@@ -67,14 +67,14 @@
          }
          // hitung nilai s
          for (let i = 0; i < data_pegawai.length; i++) {
-             let htung =
+             let htung =(
                  ((Math.pow(Number(data_pegawai[i][1]), Number(bobot[0]))).toFixed(3)) *
                  ((Math.pow(Number(data_pegawai[i][2]), Number(bobot[1]))).toFixed(3)) *
                  ((Math.pow(Number(data_pegawai[i][3]), Number(bobot[2]))).toFixed(3)) *
                  ((Math.pow(Number(data_pegawai[i][4]), Number(bobot[3]))).toFixed(3)) *
                  ((Math.pow(Number(data_pegawai[i][5]), Number(bobot[4]))).toFixed(3)) *
                  ((Math.pow(Number(data_pegawai[i][6]), Number(bobot[5]))).toFixed(3)) *
-                 ((Math.pow(Number(data_pegawai[i][7]), -(Number(bobot[6])))).toFixed(3));
+                 ((Math.pow(Number(data_pegawai[i][7]), -(Number(bobot[6])))).toFixed(3)));
              hasilS.push(Number(htung));
          }
          let hslS = 0;
@@ -113,6 +113,10 @@
          $("#datapgw").hide(1000);
     	 $("#bnk_table").show(1000);
     	 $('#idt').text(`NAMA PERUSAHAN : ${nama_perusahan}`)
+         console.log("nilai s");
+         console.log(hasilS);
+         console.log("nilai v");
+         console.log(hasilV);
      })
      // print data
      $('#print').click(function(){
